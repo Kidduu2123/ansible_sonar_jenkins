@@ -12,10 +12,11 @@ pipeline {
 
     stages {
         stage('Clone Code') {
-            steps {
-                git branch: 'main',
-                    url: 'git@github.com:Kidduu2123/ansible_sonar_jenkins.git'  
-            }
+           steps {
+        git branch: 'main',
+            url: 'https://github.com/Kidduu2123/ansible_sonar_jenkins.git',
+            credentialsId: 'Kidduu@123'
+    }
         }
 
         stage('Build WAR with Maven') {
