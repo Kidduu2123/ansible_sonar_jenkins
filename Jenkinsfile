@@ -15,7 +15,7 @@ pipeline {
            steps {
         git branch: 'main',
             url: 'https://github.com/Kidduu2123/ansible_sonar_jenkins.git',
-            credentialsId: 'Kidduu@123'
+            credentialsId: 'ac5160de-5167-469e-a728-be9388f00311'
     }
         }
 
