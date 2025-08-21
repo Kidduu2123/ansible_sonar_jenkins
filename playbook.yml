@@ -1,7 +1,7 @@
 ---
 - name: Deploy Amazon WAR to Tomcat server
   hosts: tomcat_servers
-  become: false
+  become: true
   gather_facts: no 
 
   tasks:
