@@ -14,7 +14,7 @@
 
     - name: Copy amazon.war to Tomcat webapps directory
       copy:
-        src: AmazonCore/target/amazon.war
+        src: /home/pavani/Amazon.war
         dest: /var/lib/tomcat9/webapps/amazon.war
         owner: tomcat
         group: tomcat
