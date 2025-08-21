@@ -1,0 +1,27 @@
+---
+- name: Deploy Amazon WAR to Tomcat server
+  hosts: tomcat_servers
+  become: yes
+
+  tasks:
+    - name: Ensure Tomcat is installed
+      apt:
+        name: tomcat9
+        state: present
+        update_cache: yes
+      notify: restart tomcat
+
+    - name: Copy amazon.war to Tomcat webapps directory
+      copy:
+        src: AmazonCore/target/amazon.war
+        dest: /var/lib/tomcat9/webapps/amazon.war
+        owner: tomcat
+        group: tomcat
+        mode: '0644'
+      notify: restart tomcat
+
+  handlers:
+    - name: restart tomcat
+      service:
+        name: tomcat9
+        state: restarted
