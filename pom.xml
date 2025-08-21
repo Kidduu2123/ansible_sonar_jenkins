@@ -11,8 +11,8 @@
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
   <modules>
-    <module>Amazon-Core</module>
-    <module>Amazon-Web</module>
+    <module>AmazonCore</module>
+    <module>AmazonWeb</module>
   </modules>
 
   <name>Amazon</name>
