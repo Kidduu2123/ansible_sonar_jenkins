@@ -1,7 +1,8 @@
 ---
 - name: Deploy Amazon WAR to Tomcat server
   hosts: tomcat_servers
-  become: yes
+  become: false
+  gather_facts: no 
 
   tasks:
     - name: Ensure Tomcat is installed
